@@ -14,17 +14,18 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
-      
+    - uses: actions/checkout@v4
+
     - name: Configurar Node.js
-      uses: actions/setup-node@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: 20.x
         cache: 'npm'
     - name: Instalar dependencias
-      run: npm ci --legacy-peer-deps
+    - run: npm ci --legacy-peer-deps
     - name: Compilar aplicación
-      run: npm run build
+    - run: npm run lint
+    - run: npm run build
 
     
     
