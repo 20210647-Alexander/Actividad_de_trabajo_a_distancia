@@ -4,12 +4,25 @@ import { evaluate } from "mathjs";
 export const operations = ["+", "-", "*", "/"];
 const equalSign = "=";
 
-export const rows = [[7, 8, 9], [4, 5, 6], [1, 2, 3], [0]];
+export const rows = [
+  [7, 8, 9],
+  [4, 5, 6],
+  [1, 2, 3],
+  [0],
+];
 
 export const Calculator = () => {
   const [value, setValue] = useState("");
 
-  const createHandleClick = (op) => () => setValue(value.concat(op));
+  const createHandleClick = (op) => () => setValue((prev) => prev.concat(op));
+
+  const handleEvaluate = () => {
+    try {
+      setValue(String(evaluate(value)));
+    } catch {
+      setValue("Error");
+    }
+  };
 
   return (
     <div>
@@ -32,7 +45,7 @@ export const Calculator = () => {
           </button>
         ))}
 
-        <button onClick={() => setValue(evaluate(value))}>{equalSign}</button>
+        <button onClick={handleEvaluate}>{equalSign}</button>
       </div>
     </div>
   );
