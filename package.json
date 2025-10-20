@@ -14,10 +14,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "@testing-library/react": "14.2.1",
     "@vitejs/plugin-react": "4.2.1",
     "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^8.57.1",
     "happy-dom": "13.6.2",
+    "standard": "^17.1.2",
     "vite": "5.1.4",
     "vitest": "^3.2.4"
   },
@@ -25,5 +28,8 @@
     "mathjs": "^12.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
