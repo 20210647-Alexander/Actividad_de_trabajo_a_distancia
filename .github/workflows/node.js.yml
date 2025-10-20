@@ -26,3 +26,7 @@ jobs:
 
       - name: Ejecutar linter
         run: npm run lint
+      - name: Test 
+        run: npm run test
+
+      
