@@ -25,8 +25,4 @@ jobs:
         run: npm run build
 
       - name: Ejecutar linter
-        run: npx eslint src
-
-    
-    
-  
+        run: npm run lint
