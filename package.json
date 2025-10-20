@@ -19,7 +19,6 @@
     "@testing-library/react": "14.2.1",
     "@vitejs/plugin-react": "4.2.1",
     "@vitest/coverage-v8": "^3.2.4",
-    "eslint": "^8.57.1",
     "happy-dom": "13.6.2",
     "standard": "^17.1.2",
     "vite": "5.1.4",
