@@ -2,12 +2,14 @@ name: Actividad de trabajo a distancia
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master" ]  
 
 jobs:
   Actividad_a_distancia:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
