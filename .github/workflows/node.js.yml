@@ -2,7 +2,10 @@ name: Actividad de trabajo a distancia
 
 on:
   push:
-    branches: [ "master" ]  
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
 
 jobs:
   Actividad_a_distancia:
